@@ -1,0 +1,34 @@
+<div class="container-fluid d-flex justify-content-center  h-75 w-50
+  mt-2 bg-white rounded">
+    <div class="row ">
+        <div class="col-12">
+            <form #formUser="ngForm">
+            <div class="mb-3">
+                <label for="name" class="form-label">Nome</label>
+                <input required  class="form-control" id="name" placeholder="Nome" name="name"
+                [(ngModel)]="user.name">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email"
+                 placeholder="name@example.com" name="email" [(ngModel)]="user.email">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Senha</label>
+                <input  type="password" class="form-control" 
+                id="password" name="password" [(ngModel)]="user.password">
+            </div>
+            <div class="mb-3">
+                <label for="confirme-senha" class="form-label">Confirme Senha</label>
+                <input  type="password" class="form-control" 
+                id="confirme-senha" name="confirme-senha" [(ngModel)]="user.confirmPassword">
+            </div>
+            <div class="d-flex justify-content-end">
+                <button (click)="salvarUser()"  type="button" class="btn btn-success">Cadastrar</button>
+                <a routerLink="/" class="btn btn-danger btn-md" role="button">Voltar</a>
+            </div>
+            <br>
+        </form>
+        </div>
+    </div>
+</div>
